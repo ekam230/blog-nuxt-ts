@@ -20,6 +20,17 @@ export default Vue.extend({
   validate({ params }) {
     return /^\d+$/.test(params.id)
   },
+  
+  head: {
+    title: 'Home page 456',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Home page description'
+      }
+    ],
+  }
 
   computed: {
     currentId(): number {
