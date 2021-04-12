@@ -30,7 +30,7 @@ export default Vue.extend({
         content: 'Home page description'
       }
     ],
-  }
+  },
 
   computed: {
     currentId(): number {
