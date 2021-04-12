@@ -22,7 +22,7 @@ export default Vue.extend({
   },
   
   head: {
-    title: 'Home page 456',
+    title: currentPost.title,
     meta: [
       {
         hid: 'description',
