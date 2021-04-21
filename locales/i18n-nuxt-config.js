@@ -14,7 +14,7 @@ export const i18n = {
     },
   ],
   lazy: true,
-  langDir: '/locales/',
+  langDir: './locales/',
   defaultLocale: 'en',
   detectBrowserLanguage: {
     alwaysRedirect: true,

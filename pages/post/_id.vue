@@ -1,14 +1,20 @@
 <template lang="pug">
-.page
-  link-to-home
 
+.page
+  SocialHead(
+    :title="currentPost.title"
+    :description="currentPost.desc"
+    :image="currentPost.img"
+  )
+  link-to-home
   section-header(
     :title="currentPost.title"
   )
-
   post-full(
     :post="currentPost"
   )
+  div
+    p {{currentId}} {{currentPost.title}}
 </template>
 
 <script lang="ts">
@@ -20,18 +26,11 @@ export default Vue.extend({
   validate({ params }) {
     return /^\d+$/.test(params.id)
   },
-  
-  head: {
-    title: currentPost.title,
-    meta: [
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'Home page description'
-      }
-    ],
+  data() {
+    return {
+      windowWidth: 432432,
+    }
   },
-
   computed: {
     currentId(): number {
       return Number(this.$route.params.id)
